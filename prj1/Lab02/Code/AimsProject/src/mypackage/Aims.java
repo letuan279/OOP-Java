@@ -2,6 +2,28 @@ package mypackage;
 
 public class Aims {
     public static void main(String[] args) {
-        
+        Cart anOrder = new Cart();
+
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Tuan", 87, 19.95f);
+        anOrder.addDigitalVideoDisc(dvd1);
+
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("The Lion King 2", "Anime", "Tuan", 87, 24.95f);
+        anOrder.addDigitalVideoDisc(dvd2);
+
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("The Lion King 3", "Anime", "Tuan", 87, 18.99f);
+        anOrder.addDigitalVideoDisc(dvd3);
+
+        System.out.println("Total Cost is: ");
+        System.out.println(anOrder.totalCost());
+
+        // Test remove function
+        anOrder.removeDigitalVideoDisc(dvd1);
+        System.out.println("Total Cost remain: ");
+        System.out.println(anOrder.totalCost());
+
+        anOrder.removeDigitalVideoDisc(dvd3);
+        System.out.println("Total Cost remain: ");
+        System.out.println(anOrder.totalCost());
+
     }
 }
