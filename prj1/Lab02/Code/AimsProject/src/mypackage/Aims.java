@@ -22,5 +22,9 @@ public class Aims {
         System.out.println("Total Cost remain: ");
         System.out.println(anOrder.totalCost());
 
+        System.out.println("ID of dvd1: " + dvd1.getId());
+        System.out.println("ID of dvd2: " + dvd2.getId());
+        System.out.println("ID of dvd3: " + dvd3.getId());
+
     }
 }
