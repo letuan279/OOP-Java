@@ -1,0 +1,9 @@
+1. Try to add a method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd. Compare to an array parameter. What do you prefer in this case
+=> Em/mình thích sử dụng method có tham số truyền vào là một số lượng tùy ý các dvd hơn vì khi trước khi truyền ta không cần phải tạo thành 1 mảng.
+
+2. After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+=> Em/mình nghĩ rằng do Java khi call hàm sẽ luôn truyền tham trị nên giá trị được truyền vào sẽ là các giá trị tham chiếu đến đối tượng. Sau đó khi thực hiện hàm sẽ tạo ra bản copy của 2 giá trị tham chiếu đó, r hoán đổi cho nhau. Vì vậy nên title của 2 object vẫn không đổi.
+
+3. After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+=> Em/mình nghĩ rằng khi truyền vào jungleDVD thì trong hàm sẽ nhận được giá trị của biến tham chiếu đến jungleDVD vì vậy nên khi gọi các hàm của đối tượng (giả sử như setTitle) thì sẽ thực sự thay đổi được thuộc tính của đối tượng ban đầu.
+
