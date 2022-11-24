@@ -72,4 +72,8 @@ public class DigitalVideoDisc {
         return this.getId() + ".DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector()
                 + " - " + this.getLength() + ": " + this.getCost() + " $";
     }
+
+    public boolean isMatch(String title) {
+        return this.getTitle().contains(title);
+    }
 }

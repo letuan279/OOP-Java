@@ -1,5 +1,7 @@
 package mypackage;
 
+import java.util.ArrayList;
+
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
@@ -67,6 +69,27 @@ public class Cart {
         }
         System.out.println("Total cost: " + total);
         System.out.println("***************************************************");
+    }
+
+    public DigitalVideoDisc searchById(int id) {
+        for (int i = 0; i < qtyOrdered; ++i) {
+            if (itemsOrdered[i].getId() == id) {
+                return itemsOrdered[i];
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<DigitalVideoDisc> seachByTitle(String title) {
+        ArrayList<DigitalVideoDisc> ans = new ArrayList<DigitalVideoDisc>();
+        for (int i = 0; i < qtyOrdered; ++i) {
+            if (itemsOrdered[i].isMatch(title))
+                ans.add(itemsOrdered[i]);
+        }
+        if (ans.isEmpty()) {
+            return null;
+        }
+        return ans;
     }
 
 }
