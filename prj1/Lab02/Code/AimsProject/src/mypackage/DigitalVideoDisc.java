@@ -36,6 +36,10 @@ public class DigitalVideoDisc {
         return this.title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getCategory() {
         return this.category;
     }
