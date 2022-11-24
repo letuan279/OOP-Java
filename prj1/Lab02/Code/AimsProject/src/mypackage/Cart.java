@@ -58,4 +58,15 @@ public class Cart {
         return ans;
     }
 
+    public void print() {
+        float total = 0;
+        System.out.println("***********************CART***********************");
+        for (int i = 0; i < qtyOrdered; ++i) {
+            System.out.println(itemsOrdered[i].toString());
+            total += itemsOrdered[i].getCost();
+        }
+        System.out.println("Total cost: " + total);
+        System.out.println("***************************************************");
+    }
+
 }
