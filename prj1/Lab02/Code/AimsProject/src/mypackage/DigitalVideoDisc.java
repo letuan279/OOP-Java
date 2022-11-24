@@ -1,5 +1,7 @@
 package mypackage;
 
+import javax.print.attribute.standard.RequestingUserName;
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
@@ -66,4 +68,8 @@ public class DigitalVideoDisc {
         return this.cost;
     }
 
+    public String toString() {
+        return this.getId() + ".DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector()
+                + " - " + this.getLength() + ": " + this.getCost() + " $";
+    }
 }

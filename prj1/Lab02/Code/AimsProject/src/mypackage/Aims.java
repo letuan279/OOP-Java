@@ -13,14 +13,14 @@ public class Aims {
         System.out.println("Total Cost is: ");
         System.out.println(anOrder.totalCost());
 
-        // Test remove function
-        anOrder.removeDigitalVideoDisc(dvd1);
-        System.out.println("Total Cost remain: ");
-        System.out.println(anOrder.totalCost());
+        // // Test remove function
+        // anOrder.removeDigitalVideoDisc(dvd1);
+        // System.out.println("Total Cost remain: ");
+        // System.out.println(anOrder.totalCost());
 
-        anOrder.removeDigitalVideoDisc(dvd3);
-        System.out.println("Total Cost remain: ");
-        System.out.println(anOrder.totalCost());
+        // anOrder.removeDigitalVideoDisc(dvd3);
+        // System.out.println("Total Cost remain: ");
+        // System.out.println(anOrder.totalCost());
 
         System.out.println("ID of dvd1: " + dvd1.getId());
         System.out.println("ID of dvd2: " + dvd2.getId());
