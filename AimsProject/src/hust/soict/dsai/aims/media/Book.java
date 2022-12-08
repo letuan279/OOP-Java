@@ -32,4 +32,8 @@ public class Book extends Media {
 		System.out.println(authorName + " is present in Array");
 	}
 
+	public String toString() {
+		return this.getId() + ".CD - " + this.getTitle() + " - " + this.getCategory() + ": " + this.getCost() + " $";
+	}
+
 }
