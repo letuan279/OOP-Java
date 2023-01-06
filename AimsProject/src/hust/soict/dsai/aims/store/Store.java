@@ -2,10 +2,14 @@ package hust.soict.dsai.aims.store;
 
 import java.util.ArrayList;
 
-import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Media;
 
 public class Store {
-    private ArrayList<DigitalVideoDisc> itemsInStore = new ArrayList<DigitalVideoDisc>();
+    private ArrayList<Media> itemsInStore = new ArrayList<Media>();
+
+    public ArrayList<Media> getItemsInStore() {
+        return itemsInStore;
+    }
 
     public void print() {
         if (itemsInStore.isEmpty()) {
@@ -15,18 +19,18 @@ public class Store {
         }
     }
 
-    public void addDVD(DigitalVideoDisc dvd) {
-        if (dvd != null) {
-            itemsInStore.add(dvd);
+    public void addMedia(Media media) {
+        if (media != null) {
+            itemsInStore.add(media);
             System.out.println("Add successfully!");
         } else {
             System.out.println("Error");
         }
     }
 
-    public void removeDVD(DigitalVideoDisc dvd) {
-        if (dvd != null) {
-            itemsInStore.remove(dvd);
+    public void removeMedia(Media media) {
+        if (media != null) {
+            itemsInStore.remove(media);
             System.out.println("Remove successfully!");
         } else {
             System.out.println("Error");
