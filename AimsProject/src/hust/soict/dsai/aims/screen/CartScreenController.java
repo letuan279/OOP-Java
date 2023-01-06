@@ -8,16 +8,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.media.Playable;
+import hust.soict.dsai.aims.store.Store;
 
 public class CartScreenController {
 	
 	private Cart cart;
+	private Store store;
 	
 	@FXML
     private TableView<Media> tblMedia;
@@ -55,9 +56,10 @@ public class CartScreenController {
     @FXML
     private Label orderDone;
     
-    public CartScreenController(Cart cart) {
+    public CartScreenController(Cart cart, Store store) {
 		super();
 		this.cart = cart;
+		this.store = store;
 	}
     
 
@@ -118,6 +120,11 @@ public class CartScreenController {
     void btnStopPressed(ActionEvent event) {
     	playingMedia.setVisible(false);
     	btnStop.setVisible(false);
+    }
+    
+    @FXML
+    void btnViewStore(ActionEvent event) {
+    	new StoreScreen(store, cart);
     }
     
     @FXML
