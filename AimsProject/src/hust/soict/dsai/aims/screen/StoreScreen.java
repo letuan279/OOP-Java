@@ -95,7 +95,7 @@ public class StoreScreen extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					System.out.println("Open cart screen!");
-					new CartScreen(cart);
+					new CartScreen(cart, store);
 					setVisible(false);
 				}
 		});
